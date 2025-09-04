@@ -1,0 +1,845 @@
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: block;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      z-index: 1000;
+    }
+
+  .menu-cubugu {
+  display: flex;
+  position: fixed;      /* Sayfa kayarken sabit kalır */
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  background: linear-gradient(to right, aqua, purple);
+  z-index: 9999;        /* Önde görünmesi için */
+}
+      /* Instagram butonu için stiller */
+    .instagram-link {
+      display: flex;
+      z-index: 100;
+      align-items: center;
+      margin-left: 10px;
+    }
+
+    .instagram-link a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      border-radius: 50%;
+      color: white;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .instagram-link a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      font-size: 1.6rem;
+    }
+    .logo img{
+      max-width: 45px;
+      width:auto;
+      max-height: 35px;
+      height: auto;
+
+    }
+
+    .linklerim {
+      display: flex;
+      list-style: none;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .linklerim li a {
+      
+      text-decoration: none;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 7px 12px;
+      transition: all 0.3s ease;
+    }
+
+    .linklerim li a:hover {
+      color: rgb(0, 255, 255);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+ .banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: midnightblue;
+  height: 65vh;
+  overflow: hidden;
+}
+.metin-kutusu {
+  position: relative; /* İçindeki absolute pozisyonlu elementler için referans */
+  width: 45%; /* Genişlik */
+  height: 100%; /* Yükseklik */
+  padding: 1rem; /* İç boşluk */
+  overflow: hidden; /* Animasyonla taşan kısımları gizle */
+}
+
+.yazi {
+  position: absolute; /* Tüm yazıları üst üste bindirmek için */
+  padding: 1rem;
+  top: 50%; /* Dikeyde ortala */
+  left: 2rem; /* Sol kenara yapışık */
+  transform: translateY(-50%); /* Tam dikey ortalamayı sağla */
+  color: white; /* Yazı rengi */
+  font-style: italic;
+  font-size: 1.8rem; /* Yazı boyutu */
+  width: 100% ; /* Padding'i dikkate alarak genişlik */
+  opacity: 0; /* Başlangıçta görünmez */
+}
+
+/* Her yazıya farklı gecikmeli animasyon uygula */
+.yazi:nth-child(1) { animation: kaydirGecis 12s 0s infinite; } /* 1. yazı hemen başlar */
+.yazi:nth-child(2) { animation: kaydirGecis 12s 3s infinite; } /* 2. yazı 3sn sonra */
+.yazi:nth-child(3) { animation: kaydirGecis 12s 6s infinite; } /* 3. yazı 6sn sonra */
+.yazi:nth-child(4) { animation: kaydirGecis 12s 9s infinite; } /* 4. yazı 9sn sonra */
+
+/* Animasyonun adım adım açıklaması */
+@keyframes kaydirGecis {
+  /* BAŞLANGIÇ (0%) */
+  0% {
+    opacity: 0; /* Tamamen şeffaf */
+    transform: translate(-100%, -50%); /* Ekranın SOL DIŞINDA */
+  }
+  
+  /* GÖRÜNÜR OLMA (10%) */
+  10% {
+    opacity: 1; /* Tamamen görünür */
+    transform: translate(0, -50%); /* NORMAL POZİSYONA gelir */
+  }
+  
+  /* BEKLEME (25%) */
+  25% {
+    opacity: 1; /* Görünür halde bekler */
+    transform: translate(0, -50%); /* Pozisyon sabit */
+  }
+  
+  /* KAYBOLMA (35%) */
+  35% {
+    opacity: 1; /* Yavaşça şeffaflaşır */
+    transform: translate(100%, -50%); /* Ekranın SAĞ DIŞINA kayar */
+  }
+  
+  /* SON (100%) - Animasyon bitişi */
+  100% {
+    opacity: 0; /* Görünmez kalır */
+    transform: translate(100%, -50%); /* SAĞ DIŞTA bekler */
+  }
+}
+     
+   
+    .kutu2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 58vh;
+      position: relative;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 7px;
+      box-shadow: 0 7px 12px rgba(81, 153, 198, 0.2);
+    }
+
+    .kutu1 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .kutu1.active {
+      opacity: 1;
+    }
+
+    .kutu1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+
+    
+
+
+        .ikikutu {
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            width: 100%;
+            gap: 35px;
+            padding:2rem;
+        }
+        h3{
+            color:rgb(3, 58, 95);
+            font-weight: 700;
+            font-style: italic;
+        }
+        
+        .tanitimkutusu {
+            flex: 1;
+            padding: 20px;
+              font-size: 1rem;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .tanitimkutusu::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border: 3px solid transparent;
+            border-radius: 8px;
+            animation: kenarlik 8s linear infinite;
+        }
+        
+        @keyframes kenarlik {
+            0% {
+                border-top: 3px solid purple;
+                border-right: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-left: 3px solid transparent;
+            }
+            25% {
+                border-top: 3px solid transparent;
+                border-right: 3px solid purple;
+                border-bottom: 3px solid transparent;
+                border-left: 3px solid transparent;
+            }
+            50% {
+                border-top: 3px solid transparent;
+                border-right: 3px solid transparent;
+                border-bottom: 3px solid purple;
+                border-left: 3px solid transparent;
+            }
+            75% {
+                border-top: 3px solid transparent;
+                border-right: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-left: 3px solid purple;
+            }
+            100% {
+                border-top: 3px solid purple;
+                border-right: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-left: 3px solid transparent;
+            }
+        }
+        
+        p {
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+
+    .tumsatir {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.8rem;
+      font-style: italic;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      margin: 20px 0;
+    }
+    .tumsatir2{
+      display: block;
+       width: 100%;
+       margin-top: 3rem;
+      padding: 3rem 1rem;
+      overflow-wrap: break-word;
+      text-align: center;
+      font-size: 1rem;
+      gap: 2px;
+         background: linear-gradient(to right, #f8f9fa, #e9ecef);
+
+    }.tumsatir2 h1{
+      font-size: 1.6rem;
+      color: rgb(137, 44, 231);
+      font-style: italic;
+    }
+    .tumsatir2 ul{
+      display: block;
+    }
+     .tumsatir2  li {
+list-style: none;
+     }
+
+    .tumsatir2 h2{
+      font-size: 1.5rem;
+    }
+
+    .guzellik {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .kart {
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(188, 255, 233);
+      box-shadow: 2px 7px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 9px;
+      overflow: hidden;
+        font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .kart:hover {
+      transform: translateY(-5px);
+    }
+
+    .karta {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .karta img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .kartb {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .kartb h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .kartb p {
+      flex-grow: 1;
+      color: #555;
+      line-height: 1.5;
+    }
+
+  
+
+    .anakutu {
+      display: flex;
+      position: relative;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      height: 50vh;
+      overflow: hidden;
+      margin: 20px auto;
+      padding: 0 40px;
+    }
+
+    .donenkup {
+      display: flex;
+      gap: 15px;
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .kutu1-carousel {
+      flex: 0 0 calc(25% - 15px);
+      height: 100%;
+      position: relative;
+    }
+
+    .kutu1-carousel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 7px;
+      transition: transform 0.3s ease;
+    }
+
+    .kutu1-carousel:hover img {
+      transform: scale(1.05);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      z-index: 10;
+      transition: background 0.3s ease;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    #sol {
+      left: 10px;
+    }
+
+    #sag {
+      right: 10px;
+    }
+
+    .carousel-indicators {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .indicator.active {
+      background: white;
+    }
+
+    
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s;
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-float i {
+            margin-top: 5px;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+   #map {
+      height: 400px;
+      width: 100%;
+    }
+    .btn-yol {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #761bae;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn-yol:hover {
+      background:#8d3ad0
+    }
+
+ .kartc{
+display: flex;
+flex-direction: column;
+align-items: center;
+height: auto;
+min-height: 45vh;
+margin-top:4rem;
+
+    }
+.iletisim {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: auto;
+
+}
+
+.iletisim-yazi {
+  flex: 1;
+  min-width: 350px;
+  padding:2rem 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: #f0f9ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.iletisim-yazi:hover {
+  transform: translateY(-5px);
+}
+
+.iletisim-yazi i {
+  font-size: 2rem;
+  color: purple;
+  margin-bottom: 1rem;
+}
+
+.iletisim-yazi p {
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* footer için */
+ 
+        /* Basitleştirilmiş Footer */
+        .alt-bilgi {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 0 15px;
+            margin-top: auto;
+        }
+        
+        .footer-icerik {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-bolum {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-bolum h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
+        .footer-bolum p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-bolum a {
+            color: #ddd;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-bolum a:hover {
+            color: white;
+        }
+        
+        .footer-bolum i {
+            margin-right: 10px;
+            color: #6a11cb;
+            width: 20px;
+        }
+        
+        .footer-alt {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-alt p {
+            margin: 5px 0;
+            color: #aaa;
+        }
+        
+        .footer-alt a {
+            color: white;
+            text-decoration: none;
+        }
+        
+
+
+
+    /* Responsive Tasarım */
+    @media (max-width: 1200px) {
+      .kutu1-carousel {
+        flex: 0 0 calc(33.33% - 15px);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .banner {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+      }
+      
+      .metin-kutusu, .kutu2 {
+        width: 100%;
+        height: 40vh;
+      }
+      
+      .guzellik {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .kutu1-carousel {
+        flex: 0 0 calc(33.33% - 15px);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .kutu1-carousel {
+        flex: 0 0 calc(50% - 15px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      
+      .linklerim {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: linear-gradient(to bottom, aqua, purple);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        z-index: 999;
+      }
+
+      
+      
+      .linklerim.active {
+        right: 0;
+      }
+           .instagram-link {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+        .ikikutu {
+                flex-direction: column;
+            }
+
+      .guzellik {
+        grid-template-columns: 1fr;
+      }
+      .kart{
+        height:50vh;
+
+      }
+      
+      .kutu1-carousel {
+        flex: 0 0 calc(50% - 15px);
+      }
+       .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+      
+        .footer-icerik {
+                flex-direction: column;
+            }
+            
+            .icon-card {
+                width: 100%;
+                max-width: 300px;
+            }
+      .anakutu {
+        padding: 0 30px;
+        height: 60vh;
+      }
+      .anakutu img{
+        object-fit: content;
+
+      }
+      .kartc{
+        margin-top: 4rem;
+      }
+      
+  .iletisim {
+    flex-direction: column;
+   
+  }
+  
+  .iletisim-yazi {
+    width: 100%;
+  }
+  
+
+    }
+
+    @media (max-width: 600px) {
+
+        .metin-kutusu{
+        padding:0.3rem;
+      }
+
+      .kutu1-carousel {
+        flex: 0 0 calc(100% - 15px);
+      }
+
+      .anakutu {
+        height: 35vh;
+        padding: 0 20px;
+      }
+
+      .carousel-btn {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .metin-kutusu{
+        padding:0.3rem;
+      }
+      .yazi {
+        padding: 1rem;
+        font-size: 1.4rem;
+      }
+      
+      .tumsatir {
+        font-size: 1.4rem;
+        padding: 1rem;
+      }
+
+       .anakutu {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+          .carousel-btn {
+                width: 42px;
+                height: 42px;
+                font-size: 16px;
+            }
+            
+            #sol {
+                left: 10px;
+            }
+            
+            #sag {
+                right: 10px;
+            }
+            
+            .donenkup {
+                height: 450px;
+            }
+    }
+
+      @media (max-width: 350px) {
+            .donenkup {
+                height: 400px;
+            }
+            
+            .carousel-btn {
+                width: 38px;
+                height: 38px;
+            }
+          }

@@ -1,0 +1,183 @@
+
+   <!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Filiz ve Songül Güzellik Salonu | Diyarbakır Kuaför & Güzellik Hizmetleri</title>
+  <meta name="description" content="Diyarbakır Kayapınar Taşaytepe Mahallesi'nde Winston AVM'ye birkaç dakika yürüme mesafesinde ve Elit Düğün Salonu civarında hizmet veren kuaför ve güzellik salonu. Saç tasarımı, cilt bakımı, lazer epilasyon ve makyaj için Filiz ve Songül Güzellik Salonu.">
+  <meta name="keywords" content="diyarbakır kuaför, diyarbakır güzellik salonu, winston avm kuaför, elit düğün salonu civarı, saç bakımı, cilt bakımı, lazer epilasyon, makyaj">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+    <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+    .btn-yol {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #761bae;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn-yol:hover {
+      background:#8d3ad0
+    }
+  </style>
+
+  <!-- Schema.org Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Filiz ve Songül Güzellik Salonu",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Talaytepe Mahallesi, 4003 sokak, no:3 B iç kapı no:1",
+    "addressLocality": "Kayapınar",
+    "addressRegion": "Diyarbakır",
+    "addressCountry": "TR"
+  },
+  "telephone": "+90 537 278 39 85",
+  "url": "https://noradark.com",
+  "sameAs": [
+    "https://www.instagram.com/filiz_ve_songul_guzellik/"
+  ]
+}
+</script>
+
+</head>
+
+<body>
+  <!-- BAŞLIK ALANI -->
+    <header class="header">
+    <nav class="menu-cubugu">
+      <h2><a href="/" class="logo"><img src="images/logo.png" alt="güzelliksalonu">Filiz ve Songül Güzellik Salonu</a></h2>
+      
+      <button class="menu-toggle" aria-label="Menüyü aç/kapat">
+        <i class="fas fa-bars"></i>
+      </button>
+
+
+      <ul class="linklerim">  <li class="instagram-link">
+          <a href="https://www.instagram.com/filiz_ve_songul_guzellik/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+
+
+        <li><a href="/"><i class="fas fa-home"></i> anasayfa</a></li>
+        <li><a href="hakkimizda"><i class="fas fa-info-circle"></i> hakkımızda</a></li>
+        <li><a href="iletisim"><i class="fas fa-phone-alt"></i> iletişim</a></li>
+        <li><a href="galeri"><i class="fas fa-images"></i> galeri</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="kartc">
+  <div class="iletisim">
+    <div class="iletisim-yazi">
+      <i class="fas fa-envelope"></i>
+      <p><strong>e-posta:</strong></p>
+      <p>filiz.akman2121@gmail.com</p>
+    </div>
+    
+    <div class="iletisim-yazi">
+      <i class="fab fa-whatsapp"></i>
+      <p><strong>irtibat:</strong></p>
+      <p>0(537) 278 39 85</p>
+      <p>0(545) 730 24 91</p>
+    </div>
+    
+    <div class="iletisim-yazi">
+      <i class="far fa-calendar-alt"></i>
+      <p><strong>çalışma saatleri:</strong></p>
+      <p>salı günü hariç her gün</p>
+      <p>09:00 - 19:00</p>
+    </div>
+  </div>
+
+    </main>
+
+
+  <h2>İşletme Konumu</h2>
+  <div id="map"></div>
+  <button class="btn-yol" onclick="yolTarifiAl()">🚗 Yol Tarifi Al</button>
+
+  <script>
+    // Güncel koordinatlar: Azel Modern Sitesi, Kayapınar / Diyarbakır
+    var isletmeKonumu = { lat: 37.9652684, lng: 40.1521538 };
+
+    function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
+        center: isletmeKonumu
+      });
+      new google.maps.Marker({
+        position: isletmeKonumu,
+        map: map,
+        title: "Filiz ve Songül Güzellik Salonu"
+      });
+    }
+
+    function yolTarifiAl() {
+      var url = `https://www.google.com/maps/dir/?api=1&destination=${isletmeKonumu.lat},${isletmeKonumu.lng}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCbidIVLLP1ukRAMJNJc-1a9J_putKN-4&callback=initMap">
+  </script>
+
+
+
+      <!-- WhatsApp İkonu -->
+    <a href="https://wa.me/905372783985?text=Merhaba, web sitenizden iletişime geçiyorum. Ürün ve hizmetleriniz hakkında bilgi almak istiyorum" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="tumsatir2">
+  <h2>Salonumuza Ulaşım</h2>
+  <p>Adresimiz: Taşaytepe Mahallesi, Kayapınar – Diyarbakır. 
+  Winston AVM’nin hemen yanında yer aldığımız için şehir merkezinden kolayca ulaşabilirsiniz. 
+  Yakın bölgelerden (Ofis, Şanlıurfa Yolu, Ninova Park) toplu taşıma ile birkaç dakika içinde ulaşım mümkündür.</p>
+</div>
+
+
+  <!-- ALT BİLGİ -->
+
+    <!-- Basitleştirilmiş Footer -->
+    <footer class="alt-bilgi">
+        <div class="footer-icerik">
+            <div class="footer-bolum">
+                <h4>Hızlı Erişim</h4>
+          <p><i class="fas fa-info-circle"></i><a href="hakkimizda">Hakkımızda</a></p>
+                <p><i class="fas fa-calendar-check"></i><a href="https://wa.me/905372783985?text=Merhaba, randevu almak istiyorum">Randevu Al</a></p>
+                <p><i class="fas fa-phone-alt"></i><a href="iletisim">İletişime Geç</a></p></div>
+            
+                <div class="footer-bolum">
+                <h4>İletişim</h4>
+                <p><i class="fas fa-map-marker-alt"></i> talaytepe Mahallesi, 4003 Sokak Azel Modern Sitesi altı  Kayapınar, Diyarbakır</p>
+                <p><i class="fas fa-phone"></i> (0545) 730 24 91 </p>
+                <p><i class="fas fa-envelope"></i> filiz.akman2121@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-alt">
+            <p>&copy; 2025 Filiz ve Songül Güzellik Salonu - Tüm hakları saklıdır</p>
+            <p>Web Tasarım: <a href="https://noradark.shop">noradark.shop</a></p>
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Anasayfa -->
+  <url>
+    <loc>https://www.filizvesongulguzellikkuaforsalonu.com.tr/</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Hakkımızda -->
+  <url>
+    <loc>https://www.filizvesongulguzellikkuaforsalonu.com.tr/hakkimizda</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- İletişim -->
+  <url>
+    <loc>https://www.filizvesongulguzellikkuaforsalonu.com.tr/iletisim</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Hizmetler -->
+  <url>
+    <loc>https://www.filizvesongulguzellikkuaforsalonu.com.tr/galeri</loc>
+    <lastmod>2025-08-28</lastmod>
+    <priority>0.9</priority>
+  </url>
+</urlset>

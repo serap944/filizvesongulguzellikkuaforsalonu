@@ -1,0 +1,18 @@
+# URL Rewrite aktif et
+RewriteEngine On
+
+# www olmayanı www'ye yönlendir (SEO için tek adres kullan)
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [L,R=301]
+
+# HTTPS yönlendirmesi (SSL varsa aktif et)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# .html uzantısını gizle
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Varsayılan index dosyaları
+DirectoryIndex index.php index.html index.htm

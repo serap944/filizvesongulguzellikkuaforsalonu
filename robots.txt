@@ -1,0 +1,10 @@
+# TARAMA KURALLARI
+User-agent: *
+Allow: /
+
+# HARİÇ TUTULANLAR
+Disallow: /admin/
+Disallow: /private/
+
+# SITEMAP LİNKİ
+Sitemap: https://www.filizvesıngulguzellikkuaforsalonu.com.tr/sitemap.xml

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filiz ve Songül Güzellik Salonu | Diyarbakır Kayapınar Kuaför & Güzellik Hizmetleri</title>
+  <meta name="description" content="Diyarbakır Kayapınar'da Winston AVM'ye yürüme mesafesinde ve Elit Düğün Salonu civarında. Profesyonel kuaför, pedikür, dermapen, lazer epilasyon, saç boyama ve makyaj hizmetleri.">
+  <meta name="keywords" content="diyarbakır kuaför, diyarbakır güzellik salonu, kayapınar kuaför, winston avm kuaför, elit düğün salonu civarı, pedikür, dermapen, lazer epilasyon, saç boyama, makyaj">
+  <meta name="author" content="Filiz ve Songül Güzellik Salonu">
+  <meta name="robots" content="index, follow">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Filiz ve Songül Güzellik Salonu",
+  "address": {
+    "@type": "PostalAddress",
+  "streetAddress": "Talaytepe Mahallesi, 4003 sokak, no:3 B iç kapı no:1",
+    "addressLocality": "Kayapınar",
+    "addressRegion": "Diyarbakır",
+    "addressCountry": "TR"
+  },
+  "telephone": "+90 537 278 39 85",
+  "url": "https://noradark.com",
+  "sameAs": [
+    "https://www.instagram.com/filiz_ve_songul_guzellik/"
+  ]
+}
+</script>
+
+
+  <style>
+    .tumsatir3{
+      
+      width: 100%;
+      margin-top:6rem;
+     font-size: 1.5rem; font-style: italic; color: blueviolet;
+    }
+
+    
+    /* Video grid düzeni */
+    .guzellik2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      padding: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .kart2 {
+      background-color: rgb(188, 255, 233);
+      box-shadow: 2px 7px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      overflow: hidden;
+      height: auto;
+    }
+
+    /* Video konteyneri - Yükseklik sorunu çözüldü */
+    .kartd {
+      width: 100%;
+      position: relative;
+      background-color: #f0f0f0;
+      height: 400px; /* Normal bilgisayar yüksekliği */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    /* Video stilleri - Tüm içeriğin görünmesi için */
+    .kartd video {
+      width: auto;
+      height: 100%;
+      max-width: 100%;
+      object-fit: contain; /* Videoyu tam olarak göster, kesme */
+      display: block;
+    }
+    
+    /* Video önizleme görüntüsü */
+    .video-preview {
+      width: auto;
+      height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    
+    .video-playing .video-preview {
+      display: none;
+    }
+    
+    /* Video kontrol düğmesi */
+    .video-kontrol {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s;
+    }
+    
+    .video-kontrol:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    
+    /* Video başlığı */
+    .video-baslik {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+ 
+    
+    /* Mobil uyumluluk */
+    @media (max-width: 768px) {
+      .guzellik2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 1rem;
+      }
+      
+      .kartd {
+        height: 350px; /* Mobilde biraz daha küçük yükseklik */
+      }
+      
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu-cubugu">
+      <h2><a href="/" class="logo"><img src="images/logo.png" alt="güzelliksalonu">Filiz ve Songül Güzellik Salonu</a></h2>
+      
+      <button class="menu-toggle" aria-label="Menüyü aç/kapat">
+        <i class="fas fa-bars"></i>
+      </button>
+
+
+      <ul class="linklerim">  <li class="instagram-link">
+          <a href="https://www.instagram.com/filiz_ve_songul_guzellik/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+
+
+        <li><a href="/"><i class="fas fa-home"></i> anasayfa</a></li>
+        <li><a href="hakkimizda"><i class="fas fa-info-circle"></i> hakkımızda</a></li>
+        <li><a href="iletisim"><i class="fas fa-phone-alt"></i> iletişim</a></li>
+        <li><a href="galeri"><i class="fas fa-images"></i> galeri</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="tumsatir3">Güzellik ve Bakım işlemlerimiz</div>
+<br>
+  <!-- VİDEO BÖLÜMÜ -->
+  <main class="guzellik2">
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=manikür" class="video-preview" alt="manikür Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z1.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">manikür</div>
+      </div> 
+    </article>
+    
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/2575fc/white?text=Özel+Makyaj" class="video-preview" alt="Özel Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z2.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Özel Makyaj</div>
+      </div> 
+    </article>
+
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Dermapen" class="video-preview" alt="Dermapen Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z3.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Dermapen</div>
+      </div> 
+    </article>
+    
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Saç+Boyama" class="video-preview" alt="Saç Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z4.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Saç boyama</div>
+      </div> 
+    </article>
+
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Cilt+Bakımı" class="video-preview" alt="Cilt Bakımı Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z6.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Cilt bakımı</div>
+      </div> 
+    </article>
+
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Makyaj" class="video-preview" alt="Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z7.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Makyaj</div>
+      </div> 
+    </article>
+
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Saç+topuzu" class="video-preview" alt="Saç Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z8.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Saç  topuzu</div>
+      </div> 
+    </article>
+
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=türban+ve+Makyaj" class="video-preview" alt="Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z10.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">makyaj ve türban</div>
+      </div> 
+    </article>
+
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Saç+ve+Makyaj" class="video-preview" alt="Saç ve Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z11.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Saç ve makyaj</div>
+      </div> 
+    </article>
+    <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=cilt+bakımı" class="video-preview" alt="Saç ve Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z14.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik"> cilt bakımı</div>
+      </div> 
+    </article>
+
+        <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=cilt+bakımı" class="video-preview" alt="Saç ve Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z15.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">cilt bakımı</div>
+      </div> 
+    </article>
+
+            <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Saç+kesimimiz" class="video-preview" alt="Saç ve Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z16.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">saç kesimimiz</div>
+      </div> 
+    </article>
+
+
+                <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Saç+ve+Makyaj" class="video-preview" alt="Saç ve Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z17.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Saç ve makyaj</div>
+      </div> 
+    </article>
+
+                <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Saç+stili" class="video-preview" alt="Saç ve Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z18.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Saç stili</div>
+      </div> 
+    </article>
+
+
+                <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Makyaj" class="video-preview" alt="Saç ve Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z19.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">makyaj</div>
+      </div> 
+    </article>
+
+                <article class="kart2">
+      <div class="kartd">
+        <img src="https://placehold.co/400x700/6a11cb/white?text=Saç+stili" class="video-preview" alt="Saç ve Makyaj Önizleme">
+        
+        <video loop muted playsinline preload="metadata">
+          <source src="images/z20.mp4" type="video/mp4">
+          Tarayıcınız video öğesini desteklemiyor.
+        </video>
+        <button class="video-kontrol">
+          <i class="fas fa-play play-icon"></i>
+          <i class="fas fa-pause pause-icon" style="display:none"></i>
+        </button>
+        <div class="video-baslik">Saç stili</div>
+      </div> 
+    </article>
+  
+  </main>
+
+
+  </main>
+
+  <!-- WhatsApp İkonu -->
+  <a href="https://wa.me/901234567890?text=Merhaba, web sitenizden iletişime geçiyorum. Ürün ve hizmetleriniz hakkında bilgi almak istiyorum" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ALT BİLGİ -->
+
+
+  <div class="tumsatir2">
+  <h2>Diyarbakır’da Profesyonel Güzellik Hizmetleri</h2>
+  <p>Winston AVM yakınındaki Filiz ve Songül Güzellik Salonu’nda pedikür, dermapen, saç boyama, 
+  cilt bakımı ve özel makyaj uygulamalarını profesyonel ekibimizle gerçekleştiriyoruz. 
+  Galerimizde yaptığımız işlemlerden örnekleri bulabilirsiniz.</p>
+</div>
+
+
+    <!-- Basitleştirilmiş Footer -->
+    <footer class="alt-bilgi">
+        <div class="footer-icerik">
+            <div class="footer-bolum">
+                <h4>Hızlı Erişim</h4>
+                <p><i class="fas fa-info-circle"></i><a href="hakkimizda">Hakkımızda</a></p>
+                <p><i class="fas fa-calendar-check"></i><a href="https://wa.me/905372783985?text=Merhaba, randevu almak istiyorum">Randevu Al</a></p>
+                <p><i class="fas fa-phone-alt"></i><a href="iletisim">İletişime Geç</a></p>
+            </div>
+            
+         <div class="footer-bolum">
+                <h4>İletişim</h4>
+                <p><i class="fas fa-map-marker-alt"></i> talaytepe Mahallesi, 4003 Sokak Azel Modern Sitesi altı  Kayapınar, Diyarbakır</p>
+                <p><i class="fas fa-phone"></i> (0545) 730 24 91 </p>
+                <p><i class="fas fa-envelope"></i> filiz.akman2121@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="footer-alt">
+            <p>&copy; 2025 Filiz ve Songül Güzellik Salonu - Tüm hakları saklıdır</p>
+            <p>Web Tasarım: <a href="https://noradark.shop">noradark.shop</a></p>
+        </div>
+    </footer>
+
+ 
+   <script src="script.js"></script>
+     <script>
+    // Tüm video kontrol düğmelerini seç
+    const videoControls = document.querySelectorAll('.video-kontrol');
+    
+    // Her video kontrol düğmesi için olay dinleyicisi ekle
+    videoControls.forEach(control => {
+      control.addEventListener('click', function() {
+        // En yakın video konteynerını bul
+        const videoContainer = this.closest('.kartd');
+        // Video elementini bul
+        const video = videoContainer.querySelector('video');
+        // İkonları bul
+        const playIcon = this.querySelector('.play-icon');
+        const pauseIcon = this.querySelector('.pause-icon');
+        
+        // Video oynatma/durdurma işlevi
+        if (video.paused) {
+          video.play().catch(error => {
+            console.log("Video oynatma hatası:", error);
+          });
+          playIcon.style.display = 'none';
+          pauseIcon.style.display = 'inline';
+          videoContainer.classList.add('video-playing');
+        } else {
+          video.pause();
+          playIcon.style.display = 'inline';
+          pauseIcon.style.display = 'none';
+        }
+      });
+    });
+    
+    // Tüm videolar için hata yönetimi
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+      video.addEventListener('error', function() {
+        console.error("Video yüklenirken hata oluştu:", video.error);
+      });
+    });
+  </script>
+</body>
+</html>
